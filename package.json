@@ -2,7 +2,7 @@
   "name": "consumimg-api-open-weather",
   "version": "1.0.0",
   "description": "Project in node to consume and make a cashing database of the open weather API",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
