@@ -18,11 +18,16 @@ const responses = await Promise.all(capitals.map(async (capital) => {
 
     const requestUrl = `${BASE_URL}?appid=${API_KEY}&q=${city}`
     const response = await fetch(requestUrl)
-    const data = await response.json()
-    console.log(response.status)
-    
-    console.log(data)
 
+    // try {
+    //     response = await fetch(requestUrl)        
+    // } catch (error) {
+    //     console.log(error)
+    //     return
+    // }
+    
+    const data = await response.json()
+    
     if (response.status !== 200) {
         return {city, message:data.message}
     }
@@ -30,4 +35,4 @@ const responses = await Promise.all(capitals.map(async (capital) => {
     return {city, message:data.main}
 }))
 
-console.log(responses) 
+console.log(responses)
