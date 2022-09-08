@@ -20,7 +20,7 @@ export default async function getWeatherForecast(capitals) {
             return {city, message:forecast.message}
         }
         
-        return {city, message:forecast.main}
+        return {city, forecast:forecast.weather[0].description , data:forecast.main}
     }))
 
     return data

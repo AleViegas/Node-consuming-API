@@ -5,4 +5,5 @@ const routes = Express.Router()
 
 routes.get('/weather', openWeatherController.show)
 
+
 export default routes
