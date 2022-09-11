@@ -10,7 +10,7 @@ export default async function getWeatherForecast(capitals) {
     
         const { city } = capital
 
-        const requestUrl = `${BASE_URL_OPEN_WEATHER}?appid=${API_KEY_OPEN_WEATHER}&q=${city}`
+        const requestUrl = `${BASE_URL_OPEN_WEATHER}?appid=${API_KEY_OPEN_WEATHER}&q=${city}&units=metric`
 
         const response = await fetch(requestUrl)
         
@@ -22,6 +22,6 @@ export default async function getWeatherForecast(capitals) {
         
         return {city, forecast:forecast.weather[0].description , data:forecast.main}
     }))
-
+    
     return data
 }
